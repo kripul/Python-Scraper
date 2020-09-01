@@ -1,0 +1,1 @@
+Get link from google.com result

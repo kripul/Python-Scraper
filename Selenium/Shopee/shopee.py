@@ -23,7 +23,6 @@ def selectlang():
             (By.XPATH, '//*[@id="modal"]/div[1]/div[1]/div/div[3]/div[1]/button')))
     driver.find_element_by_xpath('//*[@id="modal"]/div[1]/div[1]/div/div[3]/div[1]/button').click()
 
-
 def search():
     links = []
     selectlang()
@@ -46,6 +45,7 @@ def search():
             except TimeoutException:
                 print('failed to get links with query ' + line)
     return links
+
 def get_product(produt_url):
     try:
         url = 'https://shopee.com.my' + produt_url
@@ -76,3 +76,5 @@ product_urls = search()
 
 for product_url in product_urls:
     get_product(product_url)
+
+driver.quit()

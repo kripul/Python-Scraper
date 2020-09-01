@@ -1,0 +1,1 @@
+Scraper for e-commerce Shopee (shopee.com.my)
