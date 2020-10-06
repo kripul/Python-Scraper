@@ -3,13 +3,12 @@ from selenium.webdriver.chrome.options import Options
 from fake_useragent import UserAgent #pip install fake-useragent
 import time
 
-chrome_options = Options()
-
 ua = UserAgent()
 user_agent = ua.random
 PROXY = '38.91.100.122:3128' #please use your own HTTP proxy
-use_proxy = False
+use_proxy = False #change to True if you want use proxy
 
+chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument(f'user-agent={user_agent}')
 chrome_options.add_argument('log-level=2')
